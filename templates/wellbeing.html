@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Wellbeing</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+	<link href='https://css.gg/menu.css' rel='stylesheet'>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&display=swap');
+
+: root{
+	--main-color: #f73471;
+	--black: #000;
+	--light-color: #868e96;
+}
+*{
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	text-decoration: capitalize;
+	transition: all .2s linear;
+}
+::selection{
+	background: var(--main-color);
+	color: #fff;
+}
+html{
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	scroll-padding-top: 7rem;
+}
+html::-webkit-scrollbar{
+	width: 1rem;
+}
+html::-webkit-scrollbar-track{
+	background: #fafafa;
+}
+html::-webkit-scrollbar-thumb{
+	background: var(--main-color);
+	border-radius: 5rem;
+}
+section{
+	padding: 2rem 9%;
+}
+.heading{
+	font-size: 4rem;
+	text-align: center;
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+	color: var(--orange);
+	text-transform: uppercase;
+}
+.heading span{
+	text-transform: uppercase;
+	color: orange;
+}
+.btn{
+	margin-top: 1rem;
+	display: inline-block;
+	padding: .8rem 3rem;
+	background: #fff;
+	font-weight: 500;
+	cursor: pointer;
+	color: red;
+	font-size: 1.7rem;
+}
+.bit:hover{
+	background: orange;
+	color: orange;
+	letter-spacing: .1rem;
+}
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 3rem 9%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba(255, 255, 255, .1);
+	box-shadow: 0rem .1rem .5rem rgba(0, 0, 0, .1);
+	z-index: 1000;
+}
+.header .logo{
+	font-size: 2.5rem;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+}
+.header .logo span{
+	color: var(--main-color);
+	text-transform: uppercase;
+}
+.header .navbar a{
+	font-size: 1.7rem;
+	color: #fff;
+	margin: 0 1rem;
+}
+.header .navbar a:hover{
+	color: var(--main-color);
+}
+.header .icons div{
+	font-size: 2.5rem;
+	color: #fff;
+	padding: .5rem;
+	cursor: pointer;
+	margin-left: 1rem;
+}
+.header .icons div:hover{
+	transform: rotate(180deg);
+	color: var(--main-color);
+}
+.header .icons a{
+	font-size: 1.5rem;
+	letter-spacing: .1rem;
+	color: #fff;
+	background: orangered;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: .8rem 2rem;
+	border: none;
+}
+.header .icons a:hover{
+	color: var(--main-color);
+	background: #fff;
+}
+#menu-btn{
+	display: none;
+}
+.header.active{
+	padding: 2rem 9%;
+	background: rgba(0, 0, 0, 0.9);
+}
+
+
+.home{
+	padding: 0%;
+}
+.home .home-slider .box{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	background-size: cover !important;
+	background-position: center !important;
+}
+.home .home-slider .box .content{
+	text-align: center;
+	max-width: 70rem;
+}
+.home .home-slider .box .content h3{
+	font-size: 5rem;
+	color: #fff;
+	text-transform: uppercase;
+	transition-delay: .2s; 
+}
+.home .home-slider .box .content p{
+	font-size: 1.7rem;
+	color: #eee;
+	padding: 1rem 0;
+	transition-delay: .4s;
+}
+.home .home-slider .box .button .btn-1{
+	background: var(--main-color);
+	color: #fff;
+	margin-right: .5rem;
+}
+.home .home-slider .box .button .btn-1:hover{
+	background: #fff;
+	color: red;
+}
+.home .home-slider .box .button{
+	transition-delay: .6s;
+}
+.home .home-slider .box .content> *{
+	transform: translateY(2rem);
+	opacity: 0;
+}
+.home .home-slider .box .content> *{
+	transform: translateY(0);
+	opacity: 1;
+}
+.home .home-slider .swiper-slide-active .content >*{
+	transform: translateY(0);
+	opacity: 1;
+}
+
+
+.feature .feature-slider{
+	padding-bottom: 4rem;
+}
+.feature .feature-slider .box{
+	position: relative;
+	text-align: center;
+	overflow:  hidden;
+	margin: 1rem 0;
+}
+.feature .feature-slider .box .image{
+	height: 40rem;
+	width: 100%;
+	overflow: hidden;
+}
+.feature .feature-slider .box .image img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.feature .feature-slider .box:hover .image img{
+	transform: scale(1.2);
+}
+.feature .feature-slider .box .content{
+	padding: 1rem 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	align-items: center;
+}
+.feature .feature-slider .box .content h3{
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	background: rgba(0, 0, 0, .3);
+	padding: .2rem;
+	margin-top: .5rem;
+}
+.main{
+	width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.diet .main h2{
+	font-size: 2.5vw;
+	position: relative;
+	text-align: justify;
+	padding-top: 50px;
+	display: inline-block;
+}
+.diet .main .h2 span{
+	color: var(--prime);
+}
+span{
+	color: var(--prime);
+}
+.main h2:before{
+	position: absolute;
+	content: '';
+	background: var(--prime);
+	height: 3px;
+	width: 30%;
+	right: -15px;
+	bottom: 0;
+	border-radius: 50px;
+}
+.main h6{
+	margin-top: 10px;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
+.diet .content{
+	flex-direction: column;
+}
+
+.diet .content .row{
+	display: flex;
+	position: relative;
+	width: 100%;
+	padding: 20px 0;
+	justify-content: center;
+}
+.diet .content .row:nth-child(odd) .a{
+	order: 2;
+}
+.diet .content .row .cols{
+	position: relative;
+	width: 600px;
+	padding: 20px 50px;
+}
+.diet .content .row .cols .heading{
+	font-size: 2rem;
+	color: #ff8502;
+	text-transform: capitalize;
+}
+.diet .content .row:nth-child(odd) .cols .heading{
+	color: #02a3ff;
+}
+.diet .content .row .cols .boxes{
+	position: relative;
+	width: 100%;
+	height: 350px;
+	padding: 20px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+.diet .content .row .cols .boxes img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.schedule{
+	background: #eee;
+}
+.schedule .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+}
+.schedule .box-container .box{
+	background: #fff;
+	overflow: hidden;
+}
+.schedule .box-container .box .content{
+	padding: 2rem;
+}
+.schedule .box-container .box .content h3{
+	font-size: 2rem;
+	font-weight: 500;
+	padding-bottom: .5rem;
+}
+.schedule .box-container .box .content p{
+	color: #333;
+	font-size: 1.5rem;
+	line-height: 1.8;
+}
+.schedule .box-container .box .icons{
+	padding: 0 2rem;
+}
+.schedule .box-container .box .icons span{
+	display: block;
+	font-size: 1.3rem;
+	color: #333;
+	padding: .3rem 0;
+}
+.schedule .box-container .box .icons span i{
+	margin-right: .5rem;
+}
+.schedule .box-container .box .btn{
+	margin: 1.5rem 2rem;
+	background: white;
+	color: red;
+}
+.schedule .box-container .box .btn:hover{
+	background: yellow;
+}
+.schedule .box-container .box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.trainers .trainer-slider{
+	padding-bottom: 4rem;
+}
+.trainers .trainer-slider .box{
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	margin: 1rem 0;
+}
+.trainers .trainer-slider .box .image{
+	height: 40rem;
+	width: 100%;
+	overflow: hidden;
+}
+.trainers .trainer-slider .box .image img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.trainers .trainer-slider .box .name{
+	padding: 2rem 0;
+}
+.trainers .trainer-slider .box .name h1{
+	font-size: 3rem;
+	color: #333;
+	font-weight: 600;
+}
+.trainers .trainer-slider .box .name p{
+	font-size: 2rem;
+	color: #808080;
+}
+
+.footer{
+	background: black;
+}
+.footer .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+	gap: 1.5rem;
+}
+.footer .box-container .box{
+	padding: 2rem;
+}
+.footer .box-container .box h1{
+	font-size: 2.5rem;
+	color: #fff;
+	font-weight: 600;
+	padding-bottom: 1rem;
+}
+.footer .box-container .box .text{
+	color: #eee;
+	font-size: 1.3rem;
+	font-weight: normal;
+	line-height: 1.8;
+	padding-bottom: 1rem;
+}
+.footer .box-container .box .icons{
+	padding: 1rem 0;
+}
+.footer .box-container .box .icon a i{
+	height: 5rem;
+	width: 5rem;
+	line-height: 5rem;
+	background: var(--main-color);
+	text-align: center;
+	font-size: 2rem;
+	border-radius: 50%;
+	margin: 0 .5rem;
+	color: #fff;
+}
+.footer .box-container .box .icon a i:hover{
+	color: var(--main-color);
+	background: none;
+	border: .2rem solid var(--main-color);
+}
+.footer .box-container .box .icons a{
+	display: block;
+	color: #fff;
+	font-size: 1.5rem;
+	margin: 1.5rem;
+}
+.footer .box-container .box .icons a i{
+	margin-right: .5rem;
+	color: var(--main-color);
+}
+.footer .box-container .box .icons a i:hover{
+	padding-right: 2rem;
+	color: #fff;
+}
+.footer .box-container .box .icons a:hover{
+	color: var(--main-color);
+}
+.footer .credit{
+	padding: 3rem 0;
+	text-align: center;
+	border-top: .1rem solid #808080;
+	margin-top: 2rem;
+	font-size: 2rem;
+	font-weight: 500;
+	color: #eee;
+}
+.footer.credit span{
+	color: var(--main-color);
+}
+
+
+@media(max-width: 991px){
+	html{
+		font-size: 55%;
+	}
+	.header{
+		padding: 2rem;
+	}
+	.header.active{
+		padding: 2rem;
+	}
+	section{
+		padding: 2rem;
+	}
+}
+@media (max-width: 768px){
+	#menu-btn{
+		display: inline-block;
+	}
+	.header.navbar{
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.9);
+		border-top: .1rem solid #eee;
+		clip-path: polygon(0 0,100% 0,100% 0,0 0);
+	}
+	.header .navbar.active{
+		clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+	}
+	.header.navbar a{
+		display: block;
+		margin: 2rem;
+		font-size: 2rem;
+	}
+	.feature .feature-slider .box .content h3{
+		padding: 1rem;
+	}
+}
+@media(max-width: 450px){
+	html{
+		font-size: 50%;
+	}
+	.header.icons a{
+		letter-spacing: none;
+		font-size: 1.3rem;
+		padding: 1rem;
+	}
+}
+
+
+.main{
+	width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.main h2{
+	font-size: 2.5vw;
+	position: !important;
+	text-align: center;
+	padding-top: 180px;
+	display: inline-block;
+	color: darkslateblue;
+}
+.diet .main h2{
+	font-size: 2.5vw;
+	position: relative;
+	text-align: justify;
+	padding-top: 50px;
+	display: inline-block;
+}
+.diet .main .h2 span{
+	color: var(--prime);
+}
+span{
+	color: var(--prime);
+}
+.main h2:before{
+	position: absolute;
+	content: '';
+	background: var(--prime);
+	height: 3px;
+	width: 30%;
+	right: -15px;
+	bottom: 0;
+	border-radius: 50px;
+}
+.main h6{
+	margin-top: 10px;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
+.diet .content{
+	flex-direction: column;
+}
+
+.diet .content .row{
+	display: flex;
+	position: relative;
+	width: 100%;
+	padding: 20px 0;
+	justify-content: center;
+	font-size: 1.5rem;
+}
+.diet .content .row:nth-child(odd) .a{
+	order: 2;
+}
+.diet .content .row .cols{
+	position: relative;
+	width: 600px;
+	padding: 20px 50px;
+}
+.diet .content .row .cols .heading{
+	font-size: 5rem;
+	color: #ff8502;
+	text-transform: capitalize;
+}
+.diet .content .row:nth-child(odd) .cols .heading{
+	color: #02a3ff;
+}
+.diet .content .row .cols .boxes{
+	position: relative;
+	width: 100%;
+	height: 350px;
+	padding: 20px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+.diet .content .row .cols .boxes img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.articles
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: lightgrey;
+}
+
+.l-container {
+  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+}
+@media screen and (max-width: 760px) {
+  .l-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.b-game-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 150%;
+  perspective: 1000px;
+}
+.b-game-card__cover {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-size: cover;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transform-origin: top center;
+  will-change: transform;
+  transform: skewX(0.001deg);
+  transition: transform 0.35s ease-in-out;
+}
+.b-game-card__cover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(226deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 35%, rgba(255, 255, 255, 0.2) 42%, rgba(255, 255, 255, 0) 60%);
+  transform: translateY(-20%);
+  will-change: transform;
+  transition: transform 0.65s cubic-bezier(0.18, 0.9, 0.58, 1);
+}
+.b-game-card:hover .b-game-card__cover {
+  transform: rotateX(7deg) translateY(-6px);
+}
+.b-game-card:hover .b-game-card__cover::after {
+  transform: translateY(0%);
+}
+.b-game-card::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 12px 12px rgba(0, 0, 0, 0.4);
+  will-change: opacity;
+  transform-origin: top center;
+  transform: skewX(0.001deg);
+  transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
+}
+.b-game-card:hover::before {
+  opacity: 0.6;
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+@media screen and (max-width: 900px){
+	.navbar{
+		padding: 0 60px;
+	}
+	.navbar ol{
+		display: none;
+	}
+	.navbar ol.active{
+		top: 60px;
+		left: 0;
+		width: 100%;
+		display: flex;
+		position: fixed;
+		background: #222;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: calc(100% - 60px);
+	}
+	.navbar ol.active li{
+		margin: 8px;
+	}
+	.navbar .toggle{
+		height: 25px;
+		width: 25px;
+		margin: auto 0;
+		cursor: pointer;
+		background: url(https://cdn3.iconfinder.com/data/icons/ui-solid-3/32/Menu_list_more_options_ui-512.png);
+		background-size: 25px;
+		background-position: center;
+		filter: invert(1);
+		background-repeat: no-repeat;
+	}
+	.navbar .toggle.active{
+		background: url(https://th.bing.com/th/id/R.71db1d1c3745dab1002c547db0b6b69f?rik=XkC6sVfP2ZTCOg&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_391885.png&ehk=vf0OAda93WujxQv91wKrXxIN0w0eejVocrMDMOI4%2bXE%3d&risl=&pid=ImgRaw&r=0);
+		background-size: 40px;
+		background-position: center;
+		cursor: pointer;
+		filter: invert(1);
+	}
+	.highlights h3{
+		font-size: 3vw;
+		padding: 5px 10px;
+		border-left: 3px solid var(--prime);
+	}
+	.highlights h1{
+		font-size: 16vw;
+	}
+	.highlights .join{
+		font-size: 1.8vw;
+		border: 1px solid var(--prime);
+	}
+	.main h2{
+		font-size: 1.5rem;
+	}
+	.main h6{
+		font-size: 10px;
+	}
+	.about .content{
+		flex-direction: column;
+	}
+	.workout .content .frame{
+		width: 260px;
+		padding: 18px;
+	}
+	.diet .content .row{
+		flex-direction: column;
+	}
+	.diet .content .row .cols{
+		width: 100%;
+	}
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0 80px;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.card:hover .card__caption {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card:hover .card__image {
+  transform: translateY(-10px);
+}
+.card:hover .card__thumb::after {
+  top: 0;
+}
+.card:hover .card__snippet {
+  margin: 20px 0;
+}
+.card__thumb {
+  position: relative;
+  max-height: 800px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.card__thumb img{
+	width: 350px;
+	height: 350px;
+	object-fit: center;
+}
+@media (min-width: 1024px) {
+  .card__thumb {
+    max-height: 500px;
+  }
+}
+.card__thumb::after {
+  position: absolute;
+  top: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 40%, rgba(255, 255, 255, 0) 100%);
+  transition: 0.3s;
+}
+@media (min-width: 1024px) {
+  .card__thumb::after {
+    top: calc(100% - 140px);
+  }
+}
+.card__image {
+  transition: 0.5s ease-in-out;
+}
+.card__caption {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  padding: 0 20px;
+  color: white;
+  transform: translateY(-50%);
+  text-align: center;
+  transition: 0.3s;
+}
+@media (min-width: 1024px) {
+  .card__caption {
+    top: calc(100% - 110px);
+    transform: unset;
+  }
+}
+.card__title {
+  display: -webkit-box;
+  max-height: 85px;
+  overflow: hidden;
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+  line-height: 28px;
+  text-shadow: 0px 1px 5px black;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card__snippet {
+  display: -webkit-box;
+  max-height: 150px;
+  margin: 20px 0;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  transition: 0.5s ease-in-out;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+@media (min-width: 1024px) {
+  .card__snippet {
+    margin: 60px 0;
+  }
+}
+.card__button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  border: 1px solid white;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.card__button:hover {
+  color: black;
+  background-color: white;
+}
+
+
+.slider{
+	width: 800px;
+	height: 500px;
+	border-radius: 2px;
+	overflow: hidden;
+}
+.slides{
+	width: 500%;
+	height: 500px;
+	display: flex;
+}
+.slides input{
+	display: none;
+}
+.slide{
+	width: 20%;
+	transition: 2s;
+}
+.slide img{
+	width: 800px;
+	height: 500px;
+}
+
+.navigation-manual{
+	position: absolute;
+	width: 800px;
+	margin-top: -40px;
+	display: flex;
+	justify-content: center;
+}
+.manual-btn{
+	border: 2px solid #40D3DC;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+}
+.manual-btn:not(:last-child){
+	margin-right: 40px;
+}
+.manual-btn:hover{
+	background: #40D3DC;
+}
+#radio1:checked ~ .first{
+	margin-left: 0;
+}
+#radio2:checked ~ .first{
+	margin-left: -20%;
+}
+#radio3:checked ~ .first{
+	margin-left: -40%;
+}
+#radio4:checked ~ .first{
+	margin-left: -60%;
+}
+
+
+.navigation-auto{
+	position: absolute;
+	display: flex;
+	width: 800px;
+	justify-content: center;
+	margin-top: 460px;
+}
+.navigation-auto div{
+	border: 2px solid #40D3DC;
+	padding: 5px;
+	border-radius: 10px;
+	transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+	margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+	background: #40D3DC;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+	background: #40D3DC;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+	background: #40D3DC;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+	background: #40D3DC;
+}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<a href="#" class="logo">O<span>jas</span></a>
+		<div class="toggle" onclick="navToggle();"></div>
+		<nav class="navbar">
+			<a href="/" onclick="navToggle();">Home</a>
+			<a href="#workout" onclick="navToggle();">Workout</a>
+			<a href="#dietplans" onclick="navToggle();">DietPlans</a>
+			<!-- <a href="#" onclick="navToggle();">Influencers</a> -->
+			<a href="#mental" onclick="navToggle();">Mental Welbeing</a>
+			<a href="#contact" onclick="navToggle();">Contact Us</a>
+		</nav>
+		<div class="icons">
+			<!-- <a href="#" class="btn">Become a member</a> -->
+			<div id="menu-btn" class="fas fa-bars"></div>
+		</div>
+	</header>
+
+
+	<section id="home" class="home">
+		<div class="swiper home-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide box" style="background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(https://askthescientists.com/wp-content/uploads/2017/11/AdobeStock_163967512.jpeg);">
+					<div class="content">
+						<h3>Never Give Up</h3>
+						<p>“The secret of getting ahead is getting started.” -Mark Twain</p>
+						<div class="button">
+							<!-- <a href="#" class="btn btn-1">Get Started</a> -->
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide box" style="background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(https://www.besthealthmag.ca/wp-content/uploads/sites/16/2017/05/Health-and-mental-health-benefits-of-exercise.jpg);">
+					<div class="content">
+						<h3>Health is Wealth</h3>
+						<p>"Nothing will work unless you do." -John Wooden</p>
+						<div class="button">
+							<!-- <a href="#" class="btn btn-1">Get Started</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- <section class="feature">
+		<h1 class="heading">Daily<span> Motivation</span></h1>
+		<div class="swiper feature-slider">
+			<div class="swiper-wrapper">
+			<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://th.bing.com/th/id/R.19d90de9d77cb910aba13b928f357785?rik=DK7oYbwIM2PyIQ&riu=http%3a%2f%2fworldzfeed.com%2fwp-content%2fuploads%2f2020%2f07%2fbest-triceps-exercise-for-mass-3-scaled.jpg&ehk=DcjC8iEbjtoygfC0tlygWPPmnVIn9xgW81TpZgQIcmE%3d&risl=&pid=ImgRaw&r=0" alt="">
+				</div>
+				<div class="content">
+					<h3>Triceps</h3>
+				</div>
+			</div>
+			<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://www.ultracorepower.com/blog/wp-content/uploads/2020/09/Five-Plank-Exercise-that-you-can-do-at-home-1.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>Plank</h3>
+				</div>
+			</div>
+			<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://www.easygetproduct.com/wp-content/uploads/2019/03/Perfect-Pushups.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>Push-Up</h3>
+				</div>
+			</div>
+			<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://trainright.com/wp-content/uploads/2018/06/ATOC-uphill.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>Cycling</h3>
+				</div>
+			</div>
+			<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://wp.stanforddaily.com/wp-content/uploads/2020/02/cropped-020720.mswim_-scaled-1.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>Swimming</h3>
+				</div>
+			</div>
+			<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://www.topstretch.com/wp-content/uploads/2017/02/jumping-jacks-1.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>Jumping Jacks</h3>
+				</div>
+			</div>
+			<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://th.bing.com/th/id/R.4ad744f8fe2395c92d72a8bce85f2098?rik=55%2bY2i9BrvQ7eA&riu=http%3a%2f%2fexercise.wsu.edu%2fexercise_images%2fSingle+Leg+Glute+Bridge+2.jpg&ehk=X7Ox8M87fK%2bC0ehhgj8HQTPOty6pfu%2bi6j5DTeqsTKk%3d&risl=1&pid=ImgRaw&r=0" alt="">
+				</div>
+				<div class="content">
+					<h3>Single Leg Glute Bridge</h3>
+				</div>
+			</div>
+				<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://th.bing.com/th/id/R.44108e1504e8f1b807be0a7b9ec6312e?rik=nZRgfu0lXmhn4A&riu=http%3a%2f%2fexerciseencyclopedia.com%2fwp-content%2fuploads%2f2020%2f11%2finchworm-legs-only.jpg&ehk=NEN%2bQ7z%2fwsbysjilgUpic5bwbuK%2fJX3c41hIK7STobM%3d&risl=&pid=ImgRaw&r=0" alt="">
+				</div>
+				<div class="content">
+					<h3>Inchworm Stretch</h3>
+				</div>
+			</div>
+			<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://th.bing.com/th/id/R.66e294c9e360f5bde008d0ca605d03f6?rik=fMMMsGb6oYLYZA&riu=http%3a%2f%2fmedia2.popsugar-assets.com%2ffiles%2f2013%2f10%2f14%2f598%2fn%2f1922729%2fd9701e059a9c0438_calf-raises.xxxlarge%2fi%2fCalf-Raises.jpg&ehk=FybugA1MY%2bhI0YuaAlh3AtmDbGjmkQylJVnidHRidc4%3d&risl=&pid=ImgRaw&r=0" alt="">
+				</div>
+				<div class="content">
+					<h3>Calf Raises</h3>
+				</div>
+			</div>
+			<div class="swiper-slide box">
+				<div class="image">
+					<img src="https://lh5.googleusercontent.com/proxy/fLV0SBuJik1dZgiyhlZmv8KI4_TgTEbLJ4sIiFA8ddqKmy25MTHfkTsT-c3ong4GMspMmu379OMjDg8uiCh9W4f8WNG6fVQvX47IfeM0p79Jv-7O9XrRDv5-aQ=s0-d" alt="">
+				</div>
+				<div class="content">
+					<h3>Alternative Forward Lunges</h3>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section> -->
+<!-- 	<section class="schedule">
+		<h1 class="heading"><span>Morning</span> Workout</h1>
+		<div class="box-container">
+			<div class="box">
+				<div class="content">
+					<h3>Skipping</h3>
+					<p>Burns your calories faster.
+					   Full body workout.
+  					   Good for Brain.
+					   Tone the muscles.
+					   Less chance of getting Injured.
+					</p>
+				</div>
+				<div class="icons">
+					<span><i class="far fa-clock"></i>10 minutes</span>
+				</div>
+				
+			</div>
+			<div class="box">
+				<img src="https://cdn.cdnparenting.com/articles/2019/03/04134949/722394541-H-1024x700.jpg">
+			</div>
+			<div class="box">
+				<div class="content">
+					<h3>Running</h3>
+					<p>Better cardio health.
+					   Better Sleep.
+  					   Improved knee and back health.
+					   Improved memory.
+					   Fewer colds.
+					</p>
+				</div>
+				<div class="icons">
+					<span><i class="far fa-clock"></i>5 minutes</span>
+				</div>
+				
+			</div>
+			<div class="box">
+				<img src="https://www.getthegloss.com/media/image/gtg-increase-running-pace-main.jpg">
+			</div>
+			<div class="box">
+				<div class="content">
+					<h3>Glute Bridges</h3>
+					<p>You'll have a great posture.
+					   Strengthens your core.
+  					   Helps in lower-back pain.
+					   Decreases your knee pain.
+					   Sprint Faster and Jump Higher.
+					</p>
+				</div>
+				<div class="icons">
+					<span><i class="far fa-clock"></i>2-3 minutes</span>
+				</div>
+				
+			</div>
+			<div class="box">
+				<img src="https://th.bing.com/th/id/OIP.D6_PXJObt-EUpN9-sLlw4AHaI1?pid=ImgDet&rs=1">
+			</div>
+			<div class="box">
+				<div class="content">
+					<h3>Plank with Knee Tap</h3>
+					<p>Toning of Arm Muscles.
+					   Working of Lower Body and Butt Muscles.
+  					   Decreases the risk of getting an injury in spinal.
+					   Boosts your Metabolism.
+					   Improves Body Posture.
+					</p>
+				</div>
+				<div class="icons">
+					<span><i class="far fa-clock"></i>2-3 minutes</span>
+				</div>
+				
+			</div>
+			<div class="box">
+				<img src="https://www.womensrunning.com/wp-content/uploads/sites/2/2017/02/plank-with-knee-tap.jpg?resize=560%2C420">
+			</div>
+
+			<div class="box">
+				<div class="content">
+					<h3>Inchworm Stretch</h3>
+					<p>Full Body Stretch.
+					   Improve Posture.
+  					   Hamstring Flexibility.
+					   Improved Circulation.
+					   Improves Body Posture.
+					</p>
+				</div>
+				<div class="icons">
+					<span><i class="far fa-clock"></i>2-3 minutes</span>
+				</div>
+				
+			</div>
+			<div class="box">
+				<img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https:%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2020%2F02%2Fhamstring-stretch-inchworm-1.jpg">
+			</div>
+
+			<div class="box">
+				<div class="content">
+					<h3>Hollow body hold</h3>
+					<p>Improved spinal stability.
+					   Functional core strength.
+  					   Progression into advanced calisthenics.
+					</p>
+				</div>
+				<div class="icons">
+					<span><i class="far fa-clock"></i>2-3 minutes</span>
+				</div>
+				
+			</div>
+			<div class="box">
+				<img src="https://www.trueandpretty.com/wp-content/uploads/2016/12/Hollow-Body-Hold.jpg">
+			</div>
+		</div>
+	</section>
+ -->
+ <h1 class="heading"><span>WORKOUT</span></h1>
+ <div  id="workout" class="container">
+	<div class="card">
+		<figure class="card__thumb cover">
+			<img src="https://1.bp.blogspot.com/-S88m4Lqu5_4/Xv7ADKmuFWI/AAAAAAAAFWE/JxTMWILBiwE91v7g4xJjmkdfnmUAQyuZgCLcBGAsYHQ/s1600/Rope%2Bjump%2Bgif.gif" alt="" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Skipping</h2>
+				<p class="card__snippet">Jumping rope is a cardio exercise that a lot of world-class athletes swear by. From toning your calves to tightening your core, jumping rope regularly can also improve your capacity and build stamina. Let’s talk about some of them.</p>
+				<a href="https://blog.decathlon.in/articles/10-health-benefits-of-skipping" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://media4.giphy.com/media/ckMk3RKUK29lziaspI/giphy.gif" alt="Picture by Kyle Cottrell" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Jumping Jacks</h2>
+				<p class="card__snippet">For those looking for a way of getting fit and healthy, it might be worth considering the many benefits of jumping jacks.</p>
+				<a href="https://thegymgoat.com/benefits-of-jumping-jacks/#:~:text=The%20Health%20Benefits%20Of%20Jumping%20Jacks%3A%201%20Benefit%231%3A,Jumping%20Jacks%20Can%20Be%20Done%20Anywhere.%20More%20items" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://muscle-fitness.gr/wp-content/uploads/2020/04/Squat-Lateral-Leg-Lift.gif" alt="Picture by Kyle Cottrell" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Leg Squats</h2>
+				<p class="card__snippet">Squats are arguably one of the most important foundational movement patterns for strength-training exercises.</p>
+				<a href="https://www.themanual.com/fitness/benefits-of-squats/" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://www.verywellfit.com/thmb/G_PLH6g6WFNoNbyCYOAmnt1HEUY=/1500x1000/filters:fill(FFDB5D,1)/Verywell-42-3498282-Pushup01-1596-5994a0f8519de20010b3bdd3.gif" alt="Picture by Kyle Cottrell" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Push Ups</h2>
+				<p class="card__snippet">Perhaps one of the easiest exercise movements, the standard push up activates nearly every muscle in your body, which yields toned muscles and increased endurance.</p>
+				<a href="https://www.keepinspiring.me/10-massive-benefits-of-push-ups/" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://177d01fbswx3jjl1t20gdr8j-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Bicycle-Crunches.gif" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Bicycle Crunches</h2>
+				<p class="card__snippet">Crunches give a number of physical, mental and psychological benefits such as weight loss, muscles building, relaxing mind and body.</p>
+				<a href="https://www.muscleseek.com/5-benefits-bicycle-crunches/" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://www.verywellfit.com/thmb/FT9O31rniuAQzxyNiDT-wm4aWps=/1500x1000/filters:fill(FFDB5D,1)/About-2A14-Lunges-928-f5d663f28f2d4fb592e21c46ee864476.gif" alt="Picture by Kyle Cottrell" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Lunges</h2>
+				<p class="card__snippet">Lunges are a popular strength training exercise among people wanting to strengthen, sculpt, and tone their bodies, while also improving overall fitness and enhancing athletic performance.</p>
+				<a href="https://www.healthline.com/health/exercise-fitness/lunges-benefits" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://177d01fbswx3jjl1t20gdr8j-wpengine.netdna-ssl.com/wp-content/uploads/2019/05/DB-Split-Squat-with-Biceps-Curl-opt.gif" alt="Picture by Nathan Dumlao" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Bicep Curls</h2>
+				<p class="card__snippet">Doing the biceps curl is build your strength in the upper arm and learn to use your arm muscles perfectly, bracing with your core muscles.</p>
+				<a href="https://strengthauthority.com/benefits-bicep-curls/#:~:text=7%20Proven%20Benefits%20of%20Bicep%20Curls%20%28No.1%20is,Grip%20Strength.%20...%207%20Promoting%20Fat%20loss.%20" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://th.bing.com/th/id/R.19150495f0fccbaf5a130dd4cb7b6529?rik=LBTgmDxEFzpzpw&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f1996%2f7983%2farticles%2fIMG_20170720_085513_794_1024x1024.jpg%3fv%3d1522320881&ehk=0V98a8DId9dgQ2TJ9cgWjs1sh3B6bn30TTjDe9w6968%3d&risl=&pid=ImgRaw&r=0" alt="Picture by Daniel Lincoln" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Balancing Table Pose</h2>
+				<p class="card__snippet">With the initial practice of Balancing Table Pose Knee To Nose, students can gain confidence in their balance and build perfect body-breath awareness.</p>
+				<a href="https://www.tummee.com/yoga-poses/balancing-table-pose-with-knee-to-nose-flow#:~:text=In%20addition%2C%20the%20other%20benefits%20are%20explained%20below%3A,the%20reproductive%20system%20and%20the%20digestive%20system.%20" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://media1.tenor.com/images/fda0262658dd450d63135b437f5042e5/tenor.gif?itemid=9172978" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Swimming</h2>
+				<p class="card__snippet">Swimming is an excellent way to work your entire body and cardiovascular system. An hour of swimming burns almost as many calories as running, without all the impact on your bones and joints.</p>
+				<a href="https://www.healthline.com/health/benefits-of-swimming" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://thumbs.gfycat.com/CompleteZigzagFossa-small.gif" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Triceps</h2>
+				<p class="card__snippet">If you’re looking for a way to target your chest and triceps without putting undue stress on your wrists, or loading up a lot of weight that you may need a spotter for, then dips may be just what you’ve been searching for.</p>
+				<a href="https://greatist.com/fitness/the-lift-triceps-dips#:~:text=Dip%20Into%20Good%20Form%20With%20Triceps%20Dips.%201,Ramp%20up%20your%20other%20strength%20numbers.%20More%20items" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://media.giphy.com/media/kAnpk0N9Ph3he/source.gif" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Cycling</h2>
+				<p class="card__snippet">Cycling exercise is one of the best full body workouts that will not only keep you fit on the inside but also, it will keep you fit on the outside.</p>
+				<a href="https://possible.in/8-health-benefits-cycling.html#:~:text=8%20Health%20Benefits%20of%20Cycling%201%20Strengthens%20bones,for%20weight%20loss.%206%20...%20%28more%20items%29%20" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://i.pinimg.com/originals/bd/d1/eb/bdd1eb8be5eb00ae111f5e48a98e454b.gif" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Single Leg Glute Bridge</h2>
+				<p class="card__snippet">The single leg bridge exercise is a great way to isolate and strengthen the hip extensors (glutes and hamstrings). </p>
+				<a href="https://www.verywellfit.com/single-leg-bridge-exercise-3120739" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+</div><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<!-- <div class="container">
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://blog.myfitnesspal.com/wp-content/uploads/2020/06/03-side-plank-leg-raise.gif" alt="Picture by Kyle Cottrell" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Abductor Side Lifts</h2>
+				<p class="card__snippet">This exercise help strengthen important muscles needed for stabilization and injury prevention.</p>
+				<a href="https://www.livestrong.com/article/506808-the-benefits-of-abductor-muscle-exercises/" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://i.gifer.com/2My4.gif" alt="Picture by Nathan Dumlao" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Cat Camel Stretch</h2>
+				<p class="card__snippet">Regularly practicing the Cat and Cow yoga pose strengthens the shoulder, arm, and chest muscles. The deep stretch, which is part of the Cat and Camel exercise, improves neck flexibility.</p>
+				<a href="https://mobilephysiotherapyclinic.in/cat-and-camel-back-extension-exercise/" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+	<div class="card">
+		<figure class="card__thumb">
+			<img src="https://media.giphy.com/media/vgzz9EH8wTepD2ipRR/giphy.gif" alt="Picture by Daniel Lincoln" class="card__image">
+			<figcaption class="card__caption">
+				<h2 class="card__title">Walking</h2>
+				<p class="card__snippet">Of course, you probably know that any physical activity, including walking, is a boon to your overall health. But walking in particular comes with a host of benefits.</p>
+				<a href="https://www.health.harvard.edu/staying-healthy/5-surprising-benefits-of-walking" class="card__button">Read more</a>
+			</figcaption>
+		</figure>
+	</div>
+
+</div> -->
+
+<!-- <p class="disclaimer">All pictures were taken from <a class="disclaimer__link" href="https://unsplash.com/" target="_blank">Unsplash.</a></p> -->
+	<section id="dietplans" class="diet view">
+		<div class="main">
+			<h2><span>D</span>iet<span>P</span>lans</h2>
+			<h6>Healthy Body, Healthy Mind</h6>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Avocados</div>
+					<p>
+						<ol>	Here is the nutrition breakdown for a 7-ounce (201-gram)<br>
+									Calories: 322 <br>
+									Fat: 30 grams <br>
+									Protein: 4 grams<br>
+									Carbs: 17 grams<br>
+									Fiber: 14 grams<br>
+									Vitamin C: 22% of the daily value (DV)<br>
+									Vitamin E: 28% of the DV<br>
+									Vitamin K: 35% of the DV<br>
+						</ol>
+					</p>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://th.bing.com/th/id/R.c3550fc9c14d65a9831e3880096508ba?rik=9uj65Lri8TpCew&riu=http%3a%2f%2firepo.primecp.com%2f2015%2f11%2f243684%2fhow-to-store-your-avocados_ExtraLarge1000_ID-1274915.jpg%3fv%3d1274915&ehk=cqSwsmwly560ugei2FP8Mn4qRu7dp5qQPpTi7E%2f2VOY%3d&risl=&pid=ImgRaw&r=0">
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Beans</div>
+					<p>One cup (256 grams) of cooked beans contains:<br>
+						Calories: 215<br>
+						Protein: 13.4 grams<br>
+						Fiber: 13.6 grams<br>
+						Folate (vitamin B9): 23% of the RDI<br>
+						Manganese: 22% of the RDI<br>
+						Thiamine (vitamin B1): 20% of the RDI<br>
+						Copper: 17% of the RDI<br>
+						Iron: 17% of the RDI<br></p>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://th.bing.com/th/id/R.abe44037419696c2caaa8605a219b2e2?rik=zktQbpw3%2bsl2uA&riu=http%3a%2f%2fphotos.demandstudios.com%2fgetty%2farticle%2f56%2f235%2f84522472.jpg&ehk=d8hbbMYh3TBloIuGmc1ovRFwePdEAUBwRI2gXDfuCks%3d&risl=&pid=ImgRaw&r=0">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Berries</div>
+					<p>A half-cup serving of blueberries contains:<br>
+
+							Calories: 42<br>
+							Protein: 1 gram<br>
+							Carbohydrates: 11 grams<br>
+							Fiber: 2 grams<br>
+							Sugar: 7 grams<br>
+							Vitamin C: 10 milligrams<br></p>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://th.bing.com/th/id/R.8c61d92f4fbf4c4fc36090a5aed41d38?rik=7mR4SZVJzIZt%2fg&riu=http%3a%2f%2fcontent.assets.pressassociation.io%2f2017%2f08%2f25125508%2fdc1a29f4-8507-41b7-8c69-3726c5ec927e.jpg&ehk=okOmHcVLaHyDx5oRcmhuiFHdqoF79c39lyGPcfSjw04%3d&risl=&pid=ImgRaw&r=0">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Broccoli</div>
+					<p>The nutrition facts for 1 piece (91 grams) of broccoli are:<br>
+							Calories: 31<br>
+							Water: 89%<br>
+							Protein: 2.5 grams<br>
+							Carbs: 6 grams<br>
+							Sugar: 1.5 grams<br>
+							Fiber: 2.4 grams<br>
+							Fat: 0.4 grams<br></p>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://www.simplebites.net/wp-content/uploads/2010/08/IMG_1128.jpg">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Dark chocolate</div>
+					<p>The nutrition facts for 1 cup (35 grams) of dark chocolate are:<br>
+							Carbohydrates: 31<br>
+							Protein: 3.0 grams<br>
+							Carbs: 14.99 grams<br>
+							Sugar: 13.00 grams<br>
+							Fiber: 3.01 grams<br>
+							Fat: 12.99 grams<br></p>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://th.bing.com/th/id/OIP.zYVgrAVRzFuuMZDiIj2ssAHaDv?pid=ImgDet&rs=1">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Eggs</div>
+					<p>One mediumTrusted Source boiled or poached egg weighing 44 g can provide the following nutrients:<br>
+							Energy: 62.5 calories<br>
+							Protein 5.5 grams (g)<br>
+							Calcium: 24.6 mg<br>
+							Iron: 0.8 mg<br>
+							Magnesium 5.3 mg<br>
+							Phosphorus: 86.7 mg<br>
+							Potassium: 60.3 mg<br>
+							Zinc: 0.6 mg<br>
+							Cholesterol: 162 mg<br></p>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://th.bing.com/th/id/R.cd590288863d01aab18535bbc1cea308?rik=xbYSEvAkyJASuQ&riu=http%3a%2f%2fmediad.publicbroadcasting.net%2fp%2fshared%2fnpr%2fstyles%2fx_large%2fnprshared%2f201312%2f201504449.jpg&ehk=IaPY44kBMzQ8HWr1hMf10d3m26i8I02BrLjJMm6dEjY%3d&risl=&pid=ImgRaw&r=0">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Nuts and seeds</div>
+					<p>Coconut<br>
+					Calories: 94.3
+					Fat: 8.9 g
+					Carbs: 4.1 g
+					Protein: 0.9 g<br>
+					Chesnut<br>
+					Calories: 98.9
+					Fat: 1 g
+					Carbs: 21 g
+					Protein: 1.5 g<br>
+					Almond<br>
+					Calories: 182.9
+					Fat: 16 g
+					Carbs: 6.2 g
+					Protein: 6.7 g<br>
+					Walnut<br>
+					Calories: 261.3
+					Fat: 26.1 g
+					Carbs: 5.5 g
+					Protein: 6.1 g</p>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://www.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2011/06/21/LocalLiving/Images/we-eatdrink23.jpg?t=20170517">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Oranges</div>
+					<p>One medium-sized orange has:<br>
+							60 calories<br>
+							3 grams of fiber<br>
+							12 grams of sugar<br>
+							1 gram of protein<br>
+							14 micrograms of vitamin A<br>
+							70 milligrams of vitamin C<br>
+							237 milligrams of potassium<br>
+							15.4 grams of carbohydrates<br></p>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://www.abetterchoice.com.au/app/uploads/2019/08/IMG_4086-copy.jpg?x68214">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Quinoa</div>
+					<p>Here is the nutrient breakdown for 1 cup (185 grams) of cooked quinoa:<br>
+								Calories: 222<br>
+								Protein: 8 grams<br>
+								Fat: 3.55 grams<br>
+								Carbohydrates: 39 grams<br>
+								Fiber: 5 grams<br>
+								Vitamin B6: 13% of the DV<br>
+								Vitamin E: 8% of the DV<br>
+								Iron: 15% of the DV<br>
+								Zinc: 18% of the DV<br></p>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://www.slendher.com/wp-content/uploads/2013/09/17909473_l.jpg">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cols a">
+					<div class="heading">Spinach and kale</div>
+					<p>One hundred grams (g) of raw kaleTrusted Source contains:<br>
+							43 calories<br>
+							2.92 g protein<br>
+							1.49 g fat<br>
+							4.42 g carbohydrates<br>							
+							254 milligrams (mg) calcium<br>
+						  One hundred grams of raw spinach containsTrusted Source:<br>
+							23 calories<br>
+							2.86 g protein<br>
+							0.39 g fat<br>
+							3.63 g carbohydrates<br>
+				</div>
+				<div class="cols b">
+					<div class="boxes">
+						<img src="https://www.superkidsnutrition.com/wp-content/uploads/2014/04/Kale-Spinach-HP-Sized.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section  class="trainers">
+		<h1 class="heading">Fitnezz <span>Influencers</span></h1>
+		<div class="swiper trainer-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide box">
+					<div class="image">
+						<img src="https://findhealthtips.com/wp-content/uploads/2019/06/virat-1.jpg">
+					</div>
+					<div class="name">
+						<h1>Virat Kohli</h1>
+						<p>Virat Kohli is regular at gym and follows a strict 5-day workout with a 2-day rest. His workout includes a powerful combination of weights and cardio exercises. This helps in gaining lean and strong muscles, good body strength and stamina, and toning lower body muscles.</p>
+					</div>
+				</div>
+
+				<div class="swiper-slide box">
+					<div class="image">
+						<img src="https://i.dailymail.co.uk/i/newpix/2018/05/22/12/4C867FED00000578-5756957-Ronaldo_s_phenomenally_muscular_legs_are_sculpted_in_the_gym_whi-a-55_1526989108750.jpg">
+					</div>
+					<div class="name">
+						<h1>Christiano Ronaldo</h1>
+						<p>Ronaldo goes to the gym five days a week. This is in addition to his on-field football training sessions. At times, he often chooses to perform some pilates and swimming.</p>
+					</div>
+				</div>
+
+				<div class="swiper-slide box">
+					<div class="image">
+						<img src="https://sm.imgix.net/19/40/lionel-messi.jpg">
+					</div>
+					<div class="name">
+						<h1>Lionel Messi</h1>
+						<p>When it comes to Lionel Messi’s workout routine, it consists of multi-directional speed and linear speed training. Messi also focuses on weight training and stretching. </p>
+					</div>
+				</div>
+
+				<div class="swiper-slide box">
+					<div class="image">
+						<img src="https://i.pinimg.com/originals/d3/18/7b/d3187be104748ddd5498d074457e18dd.jpg">
+					</div>
+					<div class="name">
+						<h1>Dwayne ‘The Rock’ Johnson</h1>
+						<p>Depending on the type of role he’s training for, The Rock employs varying levels of intensity. It kicks off with 30-50 minutes of cardio on the elliptical cross trainer first thing in the morning. After that, he eats a hearty, protein-packed breakfast.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+	<main>
+  <section id="mental" class="articles">
+  <div class="l-container">
+  	<div class="main">
+			<h2><span>Men</span>tal Welbeing</h2>
+		</div>
+    <div class="b-game-card">
+    	<a href="https://www.artofliving.org/meditation/meditation-for-you/benefits-of-meditation#:~:text=11%20Mental%20Benefits%20of%20Meditation.%201%20Anxiety%20decreases.,sharpness%20can%20lead%20to%20lack%20of%20action%2Fprogress.%20">
+    		<div class="b-game-card__cover" style="background-image: url(https://yt3.ggpht.com/a/AATXAJx93lPKeEGo0K75Tz_3F537rYhPk6X3mOnPHg=s900-c-k-c0xffffffff-no-rj-mo);"></div>
+    	</a>
+    </div>
+    <div class="b-game-card">
+    	<a href="https://timesofindia.indiatimes.com/life-style/health-fitness/fitness/advantages-of-deep-breathing-exercises/articleshow/19213960.cms#:~:text=Advantages%20of%20deep%20breathing%20exercises%201%20Improves%20posture.,body.%204%20Stimulates%20lymphatic%20system.%205%20Improves%20digestion.">
+    		<div class="b-game-card__cover" style="background-image: url(https://3.bp.blogspot.com/-xrHPldu0m-8/WJiAH-dNI7I/AAAAAAAADUg/81rGc9Ats4kwfgSm2fLR5qy83p0iLo9zgCLcB/s1600/breathing-exercise.jpg);"></div>
+    	</a>
+    </div>
+    <div class="b-game-card">
+    	<a href="https://www.medicinenet.com/aerobic_exercise/article.htm#:~:text=TABLE%3A%20Minutes%20of%20continuous%20activity%20necessary%20to%20expend,%20%2030%20%2015%20more%20rows%20">
+    		<div class="b-game-card__cover" style="background-image: url(https://2.bp.blogspot.com/-hB-R_V2dxpU/ViN4XLZyy6I/AAAAAAAAAkw/K2EgevuYzlw/s1600/aerobic-dance-exercise.jpg);"></div>
+    	</a>
+    </div>
+   <div class="b-game-card">
+    	<a href="https://www.adventhealth.com/blog/10-health-benefits-relaxation-plus-tips-help-you-unwind">
+    		<div class="b-game-card__cover" style="background-image: url(https://www.drmiller.com/wp-content/uploads/2011/01/shutterstock_4250047.jpg);"></div>
+    	</a>
+    </div>
+    <div class="b-game-card">
+    	<a href="https://meganchiew.wordpress.com/2013/10/07/listening-to-music-is-good-for-your-health/">
+    		<div class="b-game-card__cover" style="background-image: url(https://th.bing.com/th/id/R.d78c11797acd05917d8ef2a90089b4e8?rik=6dXTFZ0bOaAcqA&riu=http%3a%2f%2fspiritualquestions.org.uk%2fwp-content%2fuploads%2f2013%2f08%2fListening-Music.jpg&ehk=VslDCyh2eL6lKuSxpD%2b4K3HuvrQwEdg33PyPgduN10w%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);"></div>
+    	</a>
+    </div>
+    <!-- <div class="b-game-card">
+    	<a href="">
+    		<div class="b-game-card__cover" style="background-image: url(https://sm.mashable.com/mashable_pk/photo/default/3658703faa39b0e7252497b87aa709f3_nd1f.jpg);"></div>
+    	</a>  
+    </div> -->
+    <div class="b-game-card">
+    	<a href="https://www.swimming.org/justswim/swimming-improves-mental-health/">
+    		<div class="b-game-card__cover" style="background-image: url(https://th.bing.com/th/id/R.fc5e92f0148df126be86ad11b9bb2487?rik=F6oMhwjZaAz0CQ&riu=http%3a%2f%2fsaddlebrookeprogress.com%2fwp-content%2fuploads%2f2017%2f06%2f1bb.jpg&ehk=DhMgKugCQiHo1OnwjJxH2sblv0li9%2bjw0DFzEm35KtE%3d&risl=&pid=ImgRaw&r=0);"></div>
+    	</a>
+    </div>
+    <div class="b-game-card">
+    	<a href="https://www.theodysseyonline.com/dancing-through-life-improving-mental-health-dance">
+    		<div class="b-game-card__cover" style="background-image: url(https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xMDY5NTQwOC9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY3Nzg4NzQxNH0.0XVyF5AacWdxqr2aYQ3h-bV4dJUcRduumXf9K7qvwI0/img.jpg?width=980);"></div>
+    	</a>
+    </div>
+  </div>
+  </section>
+</main>
+
+<!-- <section class="mental">
+			<div class="slider">
+		<div class="slides">
+			<input type="radio" name="radio-btn" id="radio1">
+			<input type="radio" name="radio-btn" id="radio2">
+			<input type="radio" name="radio-btn" id="radio3">
+			<input type="radio" name="radio-btn" id="radio4">
+
+			<div class="slide first">
+				<img src="https://www.verywellmind.com/thmb/udD6Gb3w5MPvGPPoNJPnILUVucQ=/3125x1758/smart/filters:no_upscale()/meditation-4157199_round2_standardsizing-7f47dee543b74e3282f6604e8e9ef126.png" alt="">
+			</div>
+			<div class="slide">
+				<img src="https://www.athulyaliving.com/blogs/wp-content/uploads/2020/03/Elderly-Aerobic-Exercise.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="https://cdn.dribbble.com/users/4427600/screenshots/11028057/media/11c9ca8250f35180af47a9120f6fc024.png?compress=1&resize=400x300" alt="">
+			</div>
+			<div class="slide">
+				<img src="https://i.cdn.newsbytesapp.com/images/l34020220120160640.jpeg" alt="">
+			</div>
+
+
+
+			<div class="navigation-auto">
+				<div class="auto-btn1"></div>
+				<div class="auto-btn2"></div>
+				<div class="auto-btn3"></div>
+				<div class="auto-btn4"></div>
+			</div>
+		</div>
+		<div class="navigation-manual">
+			<label for="radio1" class="manual-btn"></label>
+			<label for="radio2" class="manual-btn"></label>
+			<label for="radio3" class="manual-btn"></label>
+			<label for="radio4" class="manual-btn"></label>
+		</div>
+	</div>
+	</section> -->
+
+
+
+	<section id="contact" class="footer">
+		<div class="box-container">
+			<div class="box">
+				<h1>About</h1>
+				<div class="text">
+					<p>Health is the biggest wealth. It helps us to enjoy all the little things in life. If one is not healthy, they fail to feel happy. Being unhappy can impact the health of people around us too. In order to be truly healthy, one must eat well, sleep on time and wake up early. Our Team Ojas has build this beautiful website to encourage users to stay fit and healthy !!</p>
+				</div>
+				<div class="icon">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<h1>Contact Info</h1>
+				<div class="icons">
+					<a href="#"><i class="fas fa-map-marker-alt"> 8, Nawab Yusuf Road, Civil Lines, Prayagraj</i></a>
+					<a href="#"><i class="fas fa-phone-alt"> +91 7525810227</i></a>
+					<a href="#"><i class="fas fa-envelope"> aviralmehra08@gmail.com</i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<h1>Quick Links</h1>
+				<div class="icons">
+					<a href="#">Home</a>
+					<a href="#">Workout</a>
+					<a href="#">DietPlans</a>
+					<!-- <a href="#">Influencers</a> -->
+					<a href="#">Mental Welbeing</a>
+				</div>
+			</div>
+		</div>
+		<div class="credit">Created By<span> Team Pioneers</span> ! All Rights Reserved</div>
+	</section>
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+	let menu=document.querySelector('#menu-btn');
+let navbar=document.querySelector('.navbar');
+menu.onclick=()=>{
+	menu.classList.toggle('fa-times');
+	navbar.classList.toggle('active');
+}
+menu.click=()=>{
+	menu.classList.toggle('fa-times');
+	navbar.classList.toggle('active');
+}
+
+window.onscroll=()=>{
+	menu.classList.remove('fa-times');
+	navbar.classList.remove('active');
+	if(window.scrollY>0){
+		document.querySelector('.header').classList.add('active');		
+	}
+	else{
+		document.querySelector('.header').classList.remove('active');
+	}
+}
+window.onload=()=>{
+		if(window.scrollY>0){
+		document.querySelector('.header').classList.add('active');		
+	}
+	else{
+		document.querySelector('.header').classList.remove('active');
+	}
+	}
+
+
+var swiper = new Swiper(".home-slider", {
+        spaceBetween: 20,
+        effect: "fade",
+        grabCursor: true,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4300,
+          disableOnInteraction: false,
+        },
+      });
+
+var swiper = new Swiper(".feature-slider", {
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 1900,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+        	0: {
+        		slidesPerView: 1,
+        	},
+        	768: {
+        		slidesPerView: 2,
+        	},
+        	991: {
+        		slidesPerView: 3,
+        	},
+        },
+      });
+
+
+var swiper = new Swiper(".trainer-slider", {
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4300,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          991: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+
+window.addEventListener('scroll',function(){
+  const navbar=document.querySelector('.navbar');
+  navbar.classList.toggle("sticky",window.scrollY>50);
+});
+  const togglebar=document.querySelector('.toggle');
+  const menu=document.querySelector('ol');
+  function navToggle(){
+    togglebar.classList.toggle("active");
+    menu.classList.toggle("active");
+  }
+
+	var counter=1;
+    setInterval(function(){
+      document.getElementById('radio'+ counter).checked=true;
+      counter++;
+      if(counter>4){
+        counter=1;
+      }
+    }, 3000);
+</script>
+</body>
+</html>
