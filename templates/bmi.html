@@ -708,7 +708,10 @@
 				left: 0;
 			}
 		}
-
+    .nav-user {
+      color: #eee;
+      text-transform: uppercase;
+    }
             </style>
           </head>
   <body>
@@ -720,11 +723,17 @@
 			</label>
 			<label class="logo">OJAS</label>
 			<ul>
-				<li><a class="active" href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Feedback</a></li>
+				<li><a class="active" href="/">Home</a></li>
+        {% if user.is_authenticated%}
+          <li class = "nav-item nav-link nav-user"> Hello, {{user.username}} </li>
+          <li class="nav-item"><a class="nav-link"href="/logout">Logout</a></li>
+          {% else %}
+          <li class="nav-item "><a class="nav-link"  href="/register">Register</a></li>
+          <li class="nav-item"><a class="nav-link"href="/login">Login</a></li>
+          {% endif %}
+				<li><a href="https://discord.gg/ewKGTeA8">Chat Room</a></li>
+        <li><a href="wellbeing">Wellbeing</a></li>
+
 			</ul>
 		</nav>
 
@@ -775,7 +784,7 @@
     <div class="text">
       <!-- <div class="location">Tokyo, Japan</div> -->
       <!-- <div class="title">Tokyo Infinity</div> -->
-      <div class="author">Over Weight</div><a class="link" href="overweight" target="_blank" rel="noreferrer">Check Diet</a>
+      <div class="author">Over Weight</div><a class="link" href="overweight" rel="noreferrer">Check Diet</a>
     </div>
   </div>
   <div class="panel">
@@ -783,7 +792,7 @@
     <div class="text">
       <!-- <div class="location">New York City, New York</div>
       <div class="title">Neon Square</div> -->
-      <div class="author">Normal Weight</div><a class="link" href="normal" target="_blank" rel="noreferrer">Check Diet</a>
+      <div class="author">Normal Weight</div><a class="link" href="normal"  rel="noreferrer">Check Diet</a>
     </div>
   </div>
   <div class="panel">
@@ -791,7 +800,7 @@
     <div class="text">
       <!-- <div class="location">Hong Kong</div>
       <div class="title">Hong Kong Night City</div> -->
-      <div class="author">Under Weight</div><a class="link" href="underweight" target="_blank" rel="noreferrer">Check Diet</a>
+      <div class="author">Under Weight</div><a class="link" href="underweight" rel="noreferrer">Check Diet</a>
     </div>
   </div>
 </div>
